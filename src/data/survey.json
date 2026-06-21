@@ -1,0 +1,126 @@
+{
+  "id": "ai-tool-style",
+  "title": "AI 도구 활용 성향 테스트",
+  "subtitle": "당신이 AI를 일에 붙이는 방식을 3분 안에 확인해보세요.",
+  "description": "이 테스트는 재미와 자기 점검을 위한 가벼운 설문입니다. 결과는 브라우저에만 저장됩니다.",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "새로운 아이디어가 떠오르면 가장 먼저 하는 행동은?",
+      "options": [
+        { "id": "q1a", "label": "문제와 사용자를 글로 정리한다", "scores": { "architect": 2, "operator": 1 } },
+        { "id": "q1b", "label": "바로 화면이나 프로토타입을 만든다", "scores": { "maker": 2, "curator": 1 } },
+        { "id": "q1c", "label": "자료를 모으고 사례를 비교한다", "scores": { "researcher": 2, "architect": 1 } },
+        { "id": "q1d", "label": "자동화할 수 있는 반복 작업부터 찾는다", "scores": { "operator": 2, "maker": 1 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "AI에게 가장 자주 맡기고 싶은 작업은?",
+      "options": [
+        { "id": "q2a", "label": "코드 작성과 테스트 보조", "scores": { "maker": 2, "operator": 1 } },
+        { "id": "q2b", "label": "긴 문서 요약과 비교", "scores": { "researcher": 2, "curator": 1 } },
+        { "id": "q2c", "label": "제품 구조와 우선순위 정리", "scores": { "architect": 2, "curator": 1 } },
+        { "id": "q2d", "label": "체크리스트와 반복 운영 자동화", "scores": { "operator": 2, "architect": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "새 도구를 도입할 때 가장 걱정되는 것은?",
+      "options": [
+        { "id": "q3a", "label": "보안과 민감정보 노출", "scores": { "operator": 2, "architect": 1 } },
+        { "id": "q3b", "label": "결과가 근거 없이 그럴듯해 보이는 것", "scores": { "researcher": 2, "operator": 1 } },
+        { "id": "q3c", "label": "실제로 제품 출시로 이어지지 않는 것", "scores": { "maker": 2, "architect": 1 } },
+        { "id": "q3d", "label": "문서와 대화가 흩어지는 것", "scores": { "curator": 2, "researcher": 1 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "AI 결과물을 신뢰하기 전에 꼭 확인하는 것은?",
+      "options": [
+        { "id": "q4a", "label": "테스트, 빌드, 실행 결과", "scores": { "maker": 2, "operator": 1 } },
+        { "id": "q4b", "label": "출처, 날짜, 반례", "scores": { "researcher": 2, "curator": 1 } },
+        { "id": "q4c", "label": "문제 정의와 비범위", "scores": { "architect": 2, "operator": 1 } },
+        { "id": "q4d", "label": "나중에 다시 찾을 수 있는 구조", "scores": { "curator": 2, "architect": 1 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "당신에게 가장 매력적인 AI 워크플로우는?",
+      "options": [
+        { "id": "q5a", "label": "Issue 하나를 주고 브랜치, 코드, 테스트까지", "scores": { "maker": 2, "operator": 1 } },
+        { "id": "q5b", "label": "공개 자료를 모아 요약과 알림까지", "scores": { "researcher": 2, "operator": 1 } },
+        { "id": "q5c", "label": "아이디어를 제품 문서와 로드맵으로", "scores": { "architect": 2, "curator": 1 } },
+        { "id": "q5d", "label": "대화와 문서를 지식 그래프로 정리", "scores": { "curator": 2, "researcher": 1 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "작업이 꼬였을 때 가장 먼저 보는 것은?",
+      "options": [
+        { "id": "q6a", "label": "로그, 재현 단계, 실패 지점", "scores": { "operator": 2, "maker": 1 } },
+        { "id": "q6b", "label": "초기 목표와 범위", "scores": { "architect": 2, "curator": 1 } },
+        { "id": "q6c", "label": "다른 사례와 문서", "scores": { "researcher": 2, "architect": 1 } },
+        { "id": "q6d", "label": "남겨둔 결정 기록과 체크리스트", "scores": { "curator": 2, "operator": 1 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "AI와 협업할 때 가장 선호하는 통제 방식은?",
+      "options": [
+        { "id": "q7a", "label": "작은 작업 단위와 PR 리뷰", "scores": { "maker": 2, "operator": 1 } },
+        { "id": "q7b", "label": "명확한 금지 행동과 승인 단계", "scores": { "operator": 2, "architect": 1 } },
+        { "id": "q7c", "label": "출처와 근거 중심의 검증", "scores": { "researcher": 2, "curator": 1 } },
+        { "id": "q7d", "label": "문서 템플릿과 상태값 관리", "scores": { "curator": 2, "architect": 1 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "지금 가장 만들고 싶은 개인 AI 시스템은?",
+      "options": [
+        { "id": "q8a", "label": "개인 제품을 빠르게 만드는 구현 공장", "scores": { "maker": 2, "architect": 1 } },
+        { "id": "q8b", "label": "리서치 자동 수집과 요약 시스템", "scores": { "researcher": 2, "operator": 1 } },
+        { "id": "q8c", "label": "지식과 결정을 연결하는 개인 OS", "scores": { "curator": 2, "architect": 1 } },
+        { "id": "q8d", "label": "안정적으로 반복 운영되는 자동화 도구", "scores": { "operator": 2, "maker": 1 } }
+      ]
+    }
+  ],
+  "results": {
+    "architect": {
+      "title": "AI Product Architect",
+      "headline": "아이디어를 제품 구조와 의사결정으로 바꾸는 타입",
+      "description": "당신은 AI를 무작정 쓰기보다 문제 정의, 범위, 우선순위, 결정 기록을 먼저 잡는 편입니다. 여러 도구를 연결해도 중심 문서와 기준이 있어야 오래 갑니다.",
+      "strengths": ["제품 방향 정리", "우선순위 판단", "비범위 설정", "작업 분해"],
+      "nextStep": "지금 가진 아이디어 하나를 Product Context 문서로 정리해보세요."
+    },
+    "maker": {
+      "title": "AI Shipping Maker",
+      "headline": "아이디어를 빠르게 화면과 코드로 검증하는 타입",
+      "description": "당신은 AI를 실행 속도를 높이는 파트너로 쓰는 데 강합니다. 작게 만들고 테스트하고 공유하는 흐름에서 가장 큰 힘을 냅니다.",
+      "strengths": ["프로토타이핑", "코드 구현", "테스트 기반 검증", "빠른 배포"],
+      "nextStep": "설문, 계산기, 대시보드처럼 1일 안에 배포 가능한 작은 앱을 하나 정하세요."
+    },
+    "researcher": {
+      "title": "AI Research Scout",
+      "headline": "정보를 모으고 근거를 비교해 방향을 찾는 타입",
+      "description": "당신은 AI를 자료 탐색과 요약, 비교, 리스크 파악에 잘 활용합니다. 좋은 질문과 출처 관리가 결과 품질을 좌우합니다.",
+      "strengths": ["공개 자료 조사", "출처 비교", "리스크 식별", "요약과 큐레이션"],
+      "nextStep": "관심 주제 하나를 정하고 공개 자료 3개만 비교 요약해보세요."
+    },
+    "operator": {
+      "title": "AI Operations Controller",
+      "headline": "반복 작업과 안전한 실행 흐름을 설계하는 타입",
+      "description": "당신은 AI를 운영 가능한 자동화로 연결하는 데 관심이 많습니다. 금지 행동, 승인 단계, 체크리스트를 분명히 할수록 성과가 좋아집니다.",
+      "strengths": ["운영 안정성", "자동화 설계", "검증 절차", "보안 경계 설정"],
+      "nextStep": "반복되는 작업 하나를 골라 입력, 처리, 검증, 승인 단계를 써보세요."
+    },
+    "curator": {
+      "title": "AI Knowledge Curator",
+      "headline": "대화와 문서를 지식 자산으로 쌓는 타입",
+      "description": "당신은 AI와의 대화를 흘려보내지 않고 문서, 링크, 템플릿, 지식 그래프로 남기는 데 강합니다. 나중에 다시 찾을 수 있는 구조가 핵심입니다.",
+      "strengths": ["문서화", "지식 연결", "템플릿화", "회고와 축적"],
+      "nextStep": "최근 AI 대화 하나를 요약해서 결정, 지식, 다음 행동으로 나눠보세요."
+    }
+  },
+  "shareText": "나는 {resultTitle} 타입! AI 도구 활용 성향 테스트 결과를 확인해보세요."
+}
