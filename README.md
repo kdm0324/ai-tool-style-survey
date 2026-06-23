@@ -28,6 +28,8 @@ npm run preview
 
 repo에 push한 뒤 GitHub에서 Pages source를 `GitHub Actions`로 설정하면 `.github/workflows/deploy.yml`로 배포할 수 있다.
 
+현재는 GitHub Pages source가 `main / root`로 동작하는 경우에도 바로 보이도록, `npm run build` 결과의 `index.html`과 `assets/`를 루트에 함께 커밋한다.
+
 배포 URL은 보통 아래 형식이다.
 
 ```text
