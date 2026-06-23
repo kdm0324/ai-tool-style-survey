@@ -1,0 +1,126 @@
+{
+  "id": "faith-style",
+  "title": "신앙 스타일 테스트",
+  "subtitle": "내가 신앙을 받아들이고 살아내는 방식을 가볍게 점검해보세요.",
+  "description": "이 테스트는 재미와 자기 성찰을 위한 가벼운 설문입니다. 신앙의 깊이나 옳고 그름을 판정하지 않으며, 결과는 브라우저에만 저장됩니다.",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "말씀이나 설교를 들은 뒤 가장 먼저 남는 것은?",
+      "options": [
+        { "id": "q1a", "label": "오늘 내 삶에 적용할 한 문장", "scores": { "architect": 2, "operator": 1 } },
+        { "id": "q1b", "label": "누군가에게 실제로 해줄 수 있는 도움", "scores": { "maker": 2, "curator": 1 } },
+        { "id": "q1c", "label": "더 알고 싶은 배경과 의미", "scores": { "researcher": 2, "architect": 1 } },
+        { "id": "q1d", "label": "공동체 안에서 함께 나눌 질문", "scores": { "curator": 2, "researcher": 1 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "마음이 흔들릴 때 가장 자연스럽게 하는 행동은?",
+      "options": [
+        { "id": "q2a", "label": "말씀이나 묵상 노트를 다시 읽는다", "scores": { "architect": 2, "researcher": 1 } },
+        { "id": "q2b", "label": "기도하며 지금 할 수 있는 작은 순종을 찾는다", "scores": { "operator": 2, "architect": 1 } },
+        { "id": "q2c", "label": "믿을 만한 사람에게 솔직히 나눈다", "scores": { "curator": 2, "maker": 1 } },
+        { "id": "q2d", "label": "몸을 움직이거나 누군가를 섬기며 마음을 정리한다", "scores": { "maker": 2, "operator": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "교회나 공동체에서 가장 힘이 나는 순간은?",
+      "options": [
+        { "id": "q3a", "label": "말씀의 의미가 선명하게 이해될 때", "scores": { "researcher": 2, "architect": 1 } },
+        { "id": "q3b", "label": "맡은 일을 조용히 해내 공동체가 잘 굴러갈 때", "scores": { "operator": 2, "maker": 1 } },
+        { "id": "q3c", "label": "누군가의 필요를 발견하고 실제로 도울 때", "scores": { "maker": 2, "curator": 1 } },
+        { "id": "q3d", "label": "사람들이 서로의 이야기를 안전하게 나눌 때", "scores": { "curator": 2, "operator": 1 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "신앙적인 결정을 앞두면 무엇을 가장 중요하게 보나요?",
+      "options": [
+        { "id": "q4a", "label": "성경적 원칙과 양심에 어긋나지 않는지", "scores": { "architect": 2, "researcher": 1 } },
+        { "id": "q4b", "label": "실제로 책임 있게 감당할 수 있는지", "scores": { "operator": 2, "architect": 1 } },
+        { "id": "q4c", "label": "주변 사람에게 선한 영향을 주는지", "scores": { "maker": 2, "curator": 1 } },
+        { "id": "q4d", "label": "공동체와 충분히 나누고 분별했는지", "scores": { "curator": 2, "operator": 1 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "가장 꾸준히 해보고 싶은 신앙 습관은?",
+      "options": [
+        { "id": "q5a", "label": "짧더라도 매일 말씀 한 구절을 붙드는 것", "scores": { "architect": 2, "operator": 1 } },
+        { "id": "q5b", "label": "기도 제목과 감사 제목을 기록하는 것", "scores": { "operator": 2, "curator": 1 } },
+        { "id": "q5c", "label": "성경 배경과 신앙 질문을 공부하는 것", "scores": { "researcher": 2, "architect": 1 } },
+        { "id": "q5d", "label": "주변 사람을 위해 작은 섬김을 실천하는 것", "scores": { "maker": 2, "curator": 1 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "신앙 대화에서 내가 자주 맡는 역할은?",
+      "options": [
+        { "id": "q6a", "label": "흩어진 이야기를 핵심 원칙으로 정리한다", "scores": { "architect": 2, "operator": 1 } },
+        { "id": "q6b", "label": "질문을 던지고 의미를 더 깊이 탐색한다", "scores": { "researcher": 2, "curator": 1 } },
+        { "id": "q6c", "label": "분위기를 살피고 사람들이 말할 수 있게 돕는다", "scores": { "curator": 2, "maker": 1 } },
+        { "id": "q6d", "label": "대화가 실제 행동으로 이어지게 제안한다", "scores": { "maker": 2, "operator": 1 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "나에게 가장 필요한 신앙의 성장 방향은?",
+      "options": [
+        { "id": "q7a", "label": "말씀을 더 깊고 균형 있게 이해하기", "scores": { "researcher": 2, "architect": 1 } },
+        { "id": "q7b", "label": "작은 순종을 꾸준히 반복하기", "scores": { "operator": 2, "maker": 1 } },
+        { "id": "q7c", "label": "내 은사를 실제 섬김으로 사용하기", "scores": { "maker": 2, "curator": 1 } },
+        { "id": "q7d", "label": "혼자 버티지 않고 공동체 안에 머물기", "scores": { "curator": 2, "operator": 1 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "이번 주에 하나만 실천한다면 무엇이 좋을까요?",
+      "options": [
+        { "id": "q8a", "label": "붙들 말씀 한 구절을 정하고 하루에 한 번 떠올리기", "scores": { "architect": 2, "operator": 1 } },
+        { "id": "q8b", "label": "기도 제목 하나를 기록하고 응답 과정을 보기", "scores": { "operator": 2, "researcher": 1 } },
+        { "id": "q8c", "label": "신앙 질문 하나를 정해 차분히 공부하기", "scores": { "researcher": 2, "architect": 1 } },
+        { "id": "q8d", "label": "한 사람에게 먼저 연락하거나 작은 도움 주기", "scores": { "maker": 2, "curator": 1 } }
+      ]
+    }
+  ],
+  "results": {
+    "architect": {
+      "title": "말씀 기준형",
+      "headline": "신앙의 방향을 말씀과 원칙 위에 세우려는 타입",
+      "description": "당신은 감정이나 분위기보다 신앙의 기준과 방향을 중요하게 여기는 편입니다. 말씀을 삶의 기준으로 붙들고, 선택 앞에서 무엇이 중심인지 확인하려는 힘이 있습니다.",
+      "strengths": ["말씀 중심의 분별", "원칙 정리", "삶의 방향 설정", "흔들릴 때 기준 붙들기"],
+      "nextStep": "이번 주에 붙들 말씀 한 구절을 정하고, 그 말씀을 하루의 선택 하나에 적용해보세요."
+    },
+    "maker": {
+      "title": "섬김 실천형",
+      "headline": "믿음을 말보다 행동과 섬김으로 표현하는 타입",
+      "description": "당신은 신앙을 실제 도움, 작은 실천, 손에 잡히는 섬김으로 살아내는 데 강합니다. 누군가의 필요를 발견하고 움직일 때 신앙이 더 선명해집니다.",
+      "strengths": ["실천력", "섬김", "필요 발견", "작은 행동으로 분위기 바꾸기"],
+      "nextStep": "이번 주에 한 사람을 정해 부담 없는 도움이나 격려를 먼저 건네보세요."
+    },
+    "researcher": {
+      "title": "탐구 묵상형",
+      "headline": "질문하고 배우며 신앙의 의미를 깊이 이해하려는 타입",
+      "description": "당신은 단순한 답보다 맥락과 의미를 알고 싶어합니다. 성경의 배경, 신앙의 질문, 삶의 해석을 차분히 탐구할 때 믿음이 더 깊어집니다.",
+      "strengths": ["깊은 질문", "배경 이해", "묵상", "근거 있는 신앙 대화"],
+      "nextStep": "최근 마음에 남은 신앙 질문 하나를 적고, 말씀과 좋은 자료를 통해 천천히 살펴보세요."
+    },
+    "operator": {
+      "title": "기도 루틴형",
+      "headline": "작은 습관과 반복으로 신앙을 지켜가는 타입",
+      "description": "당신은 큰 결심보다 꾸준한 리듬을 통해 신앙을 세워가는 데 잘 맞습니다. 기도, 감사, 회고 같은 작은 루틴이 쌓일수록 마음의 중심이 안정됩니다.",
+      "strengths": ["꾸준함", "기도 습관", "자기 점검", "책임 있는 실행"],
+      "nextStep": "하루 3분 기도 루틴을 정하고, 기도 제목 하나와 감사 제목 하나를 기록해보세요."
+    },
+    "curator": {
+      "title": "공동체 연결형",
+      "headline": "사람과 이야기를 연결하며 함께 믿음을 세우는 타입",
+      "description": "당신은 혼자만의 신앙보다 함께 나누고 연결되는 신앙에서 힘을 얻는 편입니다. 안전한 대화, 경청, 격려를 통해 공동체 안의 믿음을 자라게 합니다.",
+      "strengths": ["경청", "격려", "공동체 감각", "관계 안에서의 분별"],
+      "nextStep": "이번 주에 한 사람에게 안부를 묻고, 필요하다면 함께 기도하자고 제안해보세요."
+    }
+  },
+  "shareText": "나는 {resultTitle}! 신앙 스타일 테스트 결과를 확인해보세요."
+}

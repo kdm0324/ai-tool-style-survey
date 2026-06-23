@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "cp app-index.html index.html && vite",
+    "build": "cp app-index.html index.html && tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint ."
   },

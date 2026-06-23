@@ -3,11 +3,13 @@ export type SavedSurveyState = {
   completedAt?: string;
 };
 
-const storageKey = "ai-tool-style-survey:v1";
+function getStorageKey(surveyId: string) {
+  return `${surveyId}:v1`;
+}
 
-export function loadSurveyState(): SavedSurveyState {
+export function loadSurveyState(surveyId: string): SavedSurveyState {
   try {
-    const raw = window.localStorage.getItem(storageKey);
+    const raw = window.localStorage.getItem(getStorageKey(surveyId));
     if (!raw) return { answers: {} };
     const parsed = JSON.parse(raw) as SavedSurveyState;
     return { answers: parsed.answers ?? {}, completedAt: parsed.completedAt };
@@ -16,10 +18,10 @@ export function loadSurveyState(): SavedSurveyState {
   }
 }
 
-export function saveSurveyState(state: SavedSurveyState) {
-  window.localStorage.setItem(storageKey, JSON.stringify(state));
+export function saveSurveyState(surveyId: string, state: SavedSurveyState) {
+  window.localStorage.setItem(getStorageKey(surveyId), JSON.stringify(state));
 }
 
-export function clearSurveyState() {
-  window.localStorage.removeItem(storageKey);
+export function clearSurveyState(surveyId: string) {
+  window.localStorage.removeItem(getStorageKey(surveyId));
 }

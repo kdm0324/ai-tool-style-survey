@@ -153,6 +153,19 @@ button {
   margin-bottom: 16px;
 }
 
+.home-link {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  color: var(--cyan);
+}
+
 .main-title {
   margin: 0;
   font-size: clamp(2rem, 5vw, 3rem);
@@ -324,6 +337,53 @@ button {
   margin: 0 0 12px;
   color: #fff;
   letter-spacing: -0.01em;
+}
+
+.survey-link-grid {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+  margin-top: 28px;
+}
+
+.survey-link-card {
+  display: block;
+  padding: 22px;
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.035);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.survey-link-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 227, 255, 0.36);
+  background: rgba(56, 227, 255, 0.06);
+}
+
+.survey-link-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--cyan);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.survey-link-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.survey-link-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
 }
 
 .landing-desc {
