@@ -33,6 +33,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Prepare route entry points
+        run: |
+          mkdir -p dist/ai-tool-style dist/faith-style
+          cp dist/index.html dist/ai-tool-style/index.html
+          cp dist/index.html dist/faith-style/index.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
