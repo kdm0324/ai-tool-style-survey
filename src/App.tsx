@@ -1,6 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import aiSurveyJson from "./data/ai-tool-style.json";
 import faithSurveyJson from "./data/faith-style.json";
+import {
+  buildAnonymousResultPayload,
+  downloadAnonymousResultCsv,
+  hasAnalyticsEndpoint,
+  submitAnonymousResult,
+} from "./analytics";
 import { clearSurveyState, loadSurveyState, saveSurveyState } from "./storage";
 import type { ResultKey, SurveyData } from "./types";
 
@@ -220,12 +226,24 @@ function SurveyPage({ config }: { config: SurveyConfig }) {
     return Math.min(len, survey.questions.length - 1);
   });
   const [copied, setCopied] = useState(false);
+  const [statsConsent, setStatsConsent] = useState(false);
+  const [statsMessage, setStatsMessage] = useState("");
+  const [isSubmittingStats, setIsSubmittingStats] = useState(false);
 
   const answeredCount = Object.keys(answers).length;
   const isComplete = answeredCount === survey.questions.length;
   const currentQuestion = survey.questions[currentIndex];
   const progress = Math.round((answeredCount / survey.questions.length) * 100);
   const resultState = useMemo(() => calculateResult(survey, answers), [answers, survey]);
+  const anonymousPayload = useMemo(
+    () =>
+      buildAnonymousResultPayload({
+        survey,
+        resultKey: resultState.resultKey,
+        scores: resultState.scores,
+      }),
+    [resultState.resultKey, resultState.scores, survey],
+  );
 
   useEffect(() => {
     document.title = survey.title;
@@ -261,6 +279,9 @@ function SurveyPage({ config }: { config: SurveyConfig }) {
     setCurrentIndex(0);
     setIsStarted(false);
     setCopied(false);
+    setStatsConsent(false);
+    setStatsMessage("");
+    setIsSubmittingStats(false);
   }
 
   async function shareResult() {
@@ -279,6 +300,25 @@ function SurveyPage({ config }: { config: SurveyConfig }) {
     await navigator.clipboard.writeText(`${text}\n${url}`);
     setCopied(true);
     setTimeout(() => setCopied(false), 3000);
+  }
+
+  async function saveAnonymousStats() {
+    if (!statsConsent) {
+      setStatsMessage("익명 통계 제공에 동의하면 저장할 수 있습니다.");
+      return;
+    }
+
+    setIsSubmittingStats(true);
+    setStatsMessage("");
+
+    try {
+      const result = await submitAnonymousResult(anonymousPayload);
+      setStatsMessage(result.message);
+    } catch {
+      setStatsMessage("저장 중 문제가 발생했습니다. 잠시 후 다시 시도해주세요.");
+    } finally {
+      setIsSubmittingStats(false);
+    }
   }
 
   const maxScore = useMemo(() => {
@@ -474,6 +514,41 @@ function SurveyPage({ config }: { config: SurveyConfig }) {
                     );
                   })}
               </div>
+            </div>
+
+            <div className="analytics-panel">
+              <div className="analytics-copy">
+                <h3>익명 통계 제공</h3>
+                <p>
+                  이름, 이메일, 연락처 없이 설문 ID, 결과 유형, 점수, 완료 시각만 저장합니다.
+                  {hasAnalyticsEndpoint()
+                    ? " 현재 서버 통계 저장소로 전송할 수 있습니다."
+                    : " 현재 서버 저장소가 없어 이 브라우저에만 저장됩니다."}
+                </p>
+              </div>
+
+              <label className="consent-row">
+                <input
+                  type="checkbox"
+                  checked={statsConsent}
+                  onChange={(event) => {
+                    setStatsConsent(event.target.checked);
+                    setStatsMessage("");
+                  }}
+                />
+                <span>익명 결과를 통계 개선 목적으로 저장하는 데 동의합니다.</span>
+              </label>
+
+              <div className="analytics-actions">
+                <button className="stats-save-btn" onClick={saveAnonymousStats} disabled={isSubmittingStats}>
+                  {isSubmittingStats ? "저장 중..." : "익명 결과 저장"}
+                </button>
+                <button className="csv-download-btn" onClick={() => downloadAnonymousResultCsv(anonymousPayload)}>
+                  CSV 다운로드
+                </button>
+              </div>
+
+              {statsMessage && <p className="stats-message">{statsMessage}</p>}
             </div>
 
             <div className="result-actions">
